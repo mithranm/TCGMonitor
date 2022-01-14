@@ -15,8 +15,8 @@ import smtplib
 webdriverpath = 'C:/chromedriver.exe'
 #Make sure this .txt is formated like ####$#### where left is productid and right is price as a float
 cardlistpath = 'C:/Users/mithr/Desktop/TCGScraper/cardlist.txt'
-sender = 'myspam963@gmail.com'
-pwd = 'goawayhackers123!'
+sender = 'sample@gmail.com'
+pwd = 'pwd'
 receivers = ['mithran.mohanraj@gmail.com']
 subject = 'Cards Detected Under Price:'
 body = ''
