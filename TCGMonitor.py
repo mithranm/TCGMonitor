@@ -6,13 +6,17 @@ Created on Mon Jan 10 17:36:09 2022
 """
 
 import time
+
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import smtplib
 # discordwebhook
 
 #Change these constants
-webdriverpath = 'C:/chromedriver.exe'
+driver = webdriver.Chrome(service=ChromeService(executable_path=ChromeDriverManager().install()))
 #Make sure this .txt is formated like ####$#### where left is productid and right is price as a float
 cardlistpath = 'C:/Users/mithr/Desktop/TCGScraper/cardlist.txt'
 sender = 'sample@gmail.com'
@@ -29,7 +33,6 @@ product_url_template = 'https://www.tcgplayer.com/product/'
 myproducts = []
 productid = ''
 
-driver = webdriver.Chrome(webdriverpath)
 cardlisttxt = open(cardlistpath, 'r')
 cardlist = cardlisttxt.readlines()
 cardlisttxt.close()
